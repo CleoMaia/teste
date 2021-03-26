@@ -19,7 +19,7 @@ window.addEventListener("message", function (e) {
 	var video_dash_playlist_url_old = "";
 	var video_dash_playlist_url = "";
 
-	if (user_lang == "pt-br") {
+	if (user_lang == "enUS") {
 		var series_rss = "https://www.crunchyroll.com/" + series_url.split("/")[3] + ".rss";
 	} else {
 		var series_rss = "https://www.crunchyroll.com/" + series_url.split("/")[4] + ".rss";
