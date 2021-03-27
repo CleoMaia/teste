@@ -46,7 +46,7 @@ window.addEventListener("message", async e => {
 		if (video_config_media['streams'][i].hardsub_lang == user_lang) {
 			if (rows_number <= 4) {
 				console.log('b', video_m3u8_array)
-				video_m3u8_array.push(video_config_media['streams'][i].url.replace("clipTo/120000/", "clipTo/" + video_config_media['metadata']['duration'] + "/").replace(video_config_media['streams'][i].url.split("/")[2], "dl.v.vrv.co"));
+				video_m3u8_array.push(video_config_media['streams'][i].url.replace("clipTo/120000/", "clipTo/" + video_config_media['metadata']['duration'] + "/").replace(video_config_media['streams'][i].url.split("/")[2], "fy.v.vrv.co"));
 				rows_number++;
 			}
 			if (!found) {
@@ -56,7 +56,7 @@ window.addEventListener("message", async e => {
 					found = true;
 				}
 			}
-			// video_stream_url = video_config_media['streams'][i].url.replace("pl.crunchyroll.com", "dl.v.vrv.co");
+			// video_stream_url = video_config_media['streams'][i].url.replace("pl.crunchyroll.com", "fy.v.vrv.co");
 		}
 	}
 
@@ -162,7 +162,7 @@ window.addEventListener("message", async e => {
 			//Se o episodio não for apenas para premium pega as urls de um jeito mais facil
 			if (is_ep_premium_only == false) {
 				console.log('a', player_current_playlist);
-				video_dash_playlist_url_old = player_current_playlist.replace("master.m3u8", "manifest.mpd").replace(player_current_playlist.split("/")[2], "dl.v.vrv.co").replace("evs1", "evs");
+				video_dash_playlist_url_old = player_current_playlist.replace("master.m3u8", "manifest.mpd").replace(player_current_playlist.split("/")[2], "fy.v.vrv.co").replace("evs1", "evs");
 				video_dash_playlist_url = player_current_playlist.replace(player_current_playlist.split("/")[2], "v.vrv.co").replace("evs1", "evs");
 				video_dash_playlist_url = player_current_playlist
 
@@ -198,7 +198,7 @@ window.addEventListener("message", async e => {
 						if (!params_download_link)
 							return linkDownload(id);
 						var video_mp4_url_old = video_dash_playlist_url.split("_,")[0] + "_" + video_dash_playlist_url.split(",")[1] + params_download_link;
-						var video_mp4_url = video_mp4_url_old.replace("dl.v.vrv.co", "v.vrv.co");
+						var video_mp4_url = video_mp4_url_old.replace("fy.v.vrv.co", "v.vrv.co");
 						u[id] = video_mp4_url;
 						pM1[id].resolve();
 					};
